@@ -1,0 +1,72 @@
+//created on: 21/04/2018
+package com.elo7.rules
+
+//list any import classes here.
+import com.elo7.techtalk.model.Caracteristicas;
+
+
+//declare any global variables here
+rule "MELANCIA"
+
+    when
+        c : Caracteristicas( cor == Cor.VERDE, forma == Forma.ARREDONDADA, tamanho == Tamanho.GRANDE, sabor == Sabor.DOCE)
+    then
+        System.out.println(c + " -> " + "MELANCIA");
+end
+
+rule "MAÇÃ VERDE"
+
+    when
+        c : Caracteristicas( cor == Cor.VERDE, forma == Forma.ARREDONDADA, tamanho == Tamanho.MEDIO, sabor == Sabor.CITRICO)
+    then
+        System.out.println(c + " -> " + "MAÇÃ VERDE");
+end
+
+rule "UVA VERDE"
+
+    when
+        c : Caracteristicas( cor == Cor.VERDE, forma == Forma.ARREDONDADA, tamanho == Tamanho.PEQUENO, sabor == Sabor.DOCE)
+    then
+        System.out.println(c + " -> " + "UVA VERDE");
+end
+
+rule "BANANA"
+
+    when
+        c : Caracteristicas( cor == Cor.AMARELA, forma == Forma.ALONGADA, tamanho == Tamanho.MEDIO, sabor == Sabor.DOCE)
+    then
+        System.out.println(c + " -> " + "BANANA");
+end
+
+rule "TORANJA"
+
+    when
+        c : Caracteristicas( cor == Cor.AMARELA, forma == Forma.ARREDONDADA, tamanho == Tamanho.MEDIO, sabor == Sabor.CITRICO)
+    then
+        System.out.println(c + " -> " + "TORANJA");
+end
+
+rule "LIMÃO"
+
+    when
+        c : Caracteristicas( cor == Cor.AMARELA, forma == Forma.ARREDONDADA, tamanho == Tamanho.PEQUENO, sabor == Sabor.CITRICO)
+    then
+        System.out.println(c + " -> " + "LIMÃO");
+end
+
+rule "MAÇÃ"
+
+    when
+        c : Caracteristicas( cor == Cor.VERMELHA, forma == Forma.ARREDONDADA, tamanho == Tamanho.MEDIO, sabor == Sabor.DOCE)
+    then
+        System.out.println(c + " -> " + "MAÇÃ");
+end
+
+rule "CEREJA"
+
+    when
+        c : Caracteristicas( cor == Cor.VERMELHA, forma == Forma.ARREDONDADA, tamanho == Tamanho.PEQUENO, sabor == Sabor.DOCE)
+    then
+        System.out.println(c + " -> " + "CEREJA");
+end
+

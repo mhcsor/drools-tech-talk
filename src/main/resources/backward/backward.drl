@@ -1,0 +1,27 @@
+package backward
+
+import com.elo7.techtalk.model.Fato;
+
+global com.elo7.techtalk.model.Resultado resultado;
+
+dialect  "mvel"
+
+query pertenceA(String x, String y)
+    Fato(x, y;)
+    or
+    (Fato(z, y;) and pertenceA(x, z;))
+end
+
+rule "Grande Muralha da China PERTENCE ao Planeta Terra"
+when
+    pertenceA("Grande Muralha da China", "Planeta Terra";)
+then
+    resultado.setValor("Grande Muralha da China PERTENCE ao Planeta Terra");
+end
+ 
+rule "output"
+when
+    pertenceA(elemento, lugar;)
+then
+    resultado.adicionarFato(elemento + " FAZ PARTE DE " + lugar);
+end
